@@ -206,7 +206,7 @@ Some characters are evaluated by Bash to have a non-literal meaning. Instead, th
 | `>, >>, <` | **Redirection** redirect a command's output or input to a file.
 | `<<` | **HereDoc** or _"herefile"_ is a `{file,input}` literal, a section of code treated as a seperate file. The syntax is `<< delimiter` then a line break. All subsequent lines will be redirected until the delimiter (usually `EOF`) is found at the start of a line.
 | `<<<` | **HereString** effects input redirection from a word (or quoted string). It's key difference between a heredoc is that herestrings have no delimeter.
-| `\|` | **Pipe** send the output from one command to the input of another command. This is a method of chaining commands together. e.g. `echo hello beautiful" \| grep -o beautiful`
+| `\|` | **Pipe** send the output from one command to the input of another command. This is a method of chaining commands together. e.g. `echo "hello beautiful" \| grep -o beautiful`
 | `;` | **Command Separator** _"semicolon"_ is used to separate multiple commands that are on the same line.
 | `{ }` | **Inline Group** commands inside the curly braces are treated as if they were one command. It is convenient to use these when Bash syntax requires only one command and a function doesn't feel warranted.
 | `( )` | **Subshell Group** similar to the above but where commands within are executed in a subshell (a new process). Used much like a sandbox, if a command causes side effects (like changing variables), it will have no effect on the current shell.
